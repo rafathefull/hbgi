@@ -8,7 +8,8 @@ MEMVAR Gtk, GtkSource, GLib, WebKit
 
 INIT PROCEDURE my_init()
 
-   PUBLIC Gtk := hbgi_import( "Gtk" )
+   /* Require GTK+ version 2.0 as my installation of WebKitGtk requires this version */
+   PUBLIC Gtk := hbgi_import( "Gtk", "2.0" )
    PUBLIC WebKit := hbgi_import( "WebKit" )
 
    RETURN
